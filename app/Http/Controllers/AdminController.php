@@ -121,6 +121,6 @@ class AdminController extends Controller
         $id = $request->id;
         $deleteJam = Jam::find($id);
         $deleteJam->delete();
-        return('deleted');
+        return redirect()->back()->with('success', 'Jam Session has been deleted.');
     }
 }
