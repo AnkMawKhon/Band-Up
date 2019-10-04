@@ -1,6 +1,13 @@
 @extends('layouts.admin_app')
 
 @section('content')
+<!-- Success -->
+@if(session()->has('success'))
+<div class="alert alert-success">
+    {{ session()->get('success') }}
+</div>
+@endif
+
     <!-- Page Content -->
     <div class="container card shadow">
         <!-- Page Heading -->
